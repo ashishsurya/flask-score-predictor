@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Score Predictor</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Header Start -->
+
+    <header>
+      <h2>Score Predictor</h2>
+      <a href=""
+        ><img
+          src="https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png"
+      /></a>
+    </header>
+
+    <!-- Header end -->
+
+    <!-- Flashing Messages -->
+    <!-- {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-error alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those
+      fields below.
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those
+      fields below.
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %} -->
+
+    <!-- Flashing messages end -->
+
+    <!-- Most Important Part -->
+
+    <section>
+      {% if x %}
+      <div class="result-div">
+        <p>Predicted Score : {{x}}</p>
+        <p>Current RunRate : {{y}}</p>
+        <p>Format : {{match_format}}</p>
+        <p>Thank you for using this , hope the prediction helped you.</p>
+        <button id="anotherpred" class="btn btn-secondary">Another Prediction</button>
+      </div>
+      {% endif %}
+      <div>
+        <h2>Fill in the form</h2>
+      </div>
+      <!-- Form Start -->
+      <div class="result-div note">
+        <p>
+          <strong>Note : </strong>Try not to predict the score at the initial
+          stage of the innings
+        </p>
+      </div>
+      <form id="form" action="/" method="POST" autocomplete="off">
+        <div class="form-floating mb-3">
+          <input
+            required
+            type="number"
+            name="current_score"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Current Score"
+          />
+          <label for="floatingInput">Current Score</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            required
+            type="number"
+            name="wickets_fallen"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Wickets Fallen"
+          />
+          <label for="floatingPassword">Wickets Lost</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            required
+            type="number"
+            class="form-control"
+            name="overs_completed"
+            id="floatingPassword"
+            placeholder="Overs Completed"
+          />
+          <label for="floatingPassword">Overs Completed</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            required
+            type="number"
+            class="form-control"
+            name="runs_last_5"
+            id="floatingPassword"
+            placeholder="Overs Completed"
+          />
+          <label for="floatingPassword">Runs Scored in Last 5 overs</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            required
+            type="number"
+            class="form-control"
+            name="wickets_last_5"
+            id="floatingPassword"
+            placeholder="Overs Completed"
+          />
+          <label for="floatingPassword">Wickets Lost in Last 5 overs</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            required
+            type="number"
+            class="form-control"
+            name="score_of_striker"
+            id="floatingPassword"
+            placeholder="Overs Completed"
+          />
+          <label for="floatingPassword">Score of Striker</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input
+            required
+            type="number"
+            class="form-control"
+            id="floatingPassword"
+            name="score_of_non_striker"
+            placeholder="Overs Completed"
+          />
+          <label for="floatingPassword">Score of Non Striker</label>
+        </div>
+
+        <select
+          class="form-select mb-3"
+          aria-label="Default select example"
+          name="format"
+        >
+          <option value="odi">ODI</option>
+          <option value="t20">T20</option>
+        </select>
+
+        <button id="submit" type="submit" class="btn btn-primary">
+          Get the Score
+        </button>
+      </form>
+      <!-- Form Ends -->
+    </section>
+
+    <!-- Most Impertant Part ends -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>

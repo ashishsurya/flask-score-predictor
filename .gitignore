@@ -1,0 +1,6 @@
+# virtual environment
+/env
+
+
+# cache files
+/website/__pycache__

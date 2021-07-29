@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto',sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+
+header{
+  
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+  padding: 5px 9px;
+}
+
+header > h2 {
+  cursor: pointer;
+}
+
+header > a > img {
+  object-fit: contain;
+  width: 40px;
+}
+
+
+section{
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+
+section > div {
+  border-bottom: 1px solid whitesmoke;
+  margin-bottom: 10px;
+}
+
+form { 
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 20px;
+  max-width: 400px;
+}
+form > div > input {
+  height: 50px !important;
+  
+}
+
+.result-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto Mono';
+  border: 1px solid transparent;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(228, 255, 185);
+}
+
+.result-div > p{
+  text-align: center;
+}
+
+.note{
+  background-color: rgb(255, 255, 163);
+}
+
+section > div > h2{
+  color: gray;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mybtn{
+
+  border: none;
+  outline: none;
+  padding: 3px 5px;
+}

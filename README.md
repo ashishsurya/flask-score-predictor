@@ -8,6 +8,10 @@ This machine learning model will predict the total score of the cricket match ba
 
 ## Getting Started
 
+### Preview
+
+![First Image] ()
+
 
 
 ### Installing
@@ -20,6 +24,9 @@ This machine learning model will predict the total score of the cricket match ba
 
 ```
 git clone <repo-url>
+```
+```
+cd flask-score-predictor
 ```
 ```
 pip install -r requirements.txt

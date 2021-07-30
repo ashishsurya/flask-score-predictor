@@ -10,7 +10,16 @@ This machine learning model will predict the total score of the cricket match ba
 
 ### Preview
 
-![First Image] ()
+
+#### Inital Screen
+<img src="https://raw.githubusercontent.com/ashishsurya126/flask-score-predictor/master/images/1.png" width="400px" style="object-fit:contain;"/>
+
+#### Fill Details
+<img src="https://raw.githubusercontent.com/ashishsurya126/flask-score-predictor/master/images/2.png" width="400px" style="object-fit:contain;"/>
+
+#### Get the Result
+<img src="https://raw.githubusercontent.com/ashishsurya126/flask-score-predictor/master/images/3.png" width="400px" style="object-fit:contain;"/>
+
 
 
 

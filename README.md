@@ -23,9 +23,7 @@ This machine learning model will predict the total score of the cricket match ba
 
 
 
-### Installing
 
-* You can use this web app [here]()
 
 ### Customizing
 

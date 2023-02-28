@@ -60,3 +60,9 @@ Contributors names and contact info
 * Scikit Learn
 * Flask
 * Bootstrap
+
+
+## Future Improvements
+- [ ] Seperating the API and Frontend
+- [ ] Moving tha API from flask to fastapi
+- [ ] Building the frontend in ReactJS.
